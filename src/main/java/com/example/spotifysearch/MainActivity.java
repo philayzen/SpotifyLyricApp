@@ -3,6 +3,8 @@ package com.example.spotifysearch;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -54,13 +56,10 @@ public class MainActivity extends AppCompatActivity {
         view.getSettings().setJavaScriptEnabled(true);
         view.getSettings().setDomStorageEnabled(true);
         view.setWebViewClient(new WebViewClient());
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        view.loadUrl("http://localhost:5000/");
-        //view.loadUrl("https://www.amazon.de");
+
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            view.loadUrl("http://0.0.0.0:5000/");
+        }, 2000);
     }
 
     private void startFlaskServer() {
