@@ -1,0 +1,13 @@
+build/
+.idea/**
+.gradle/**
+*.iml
+bin/
+gen/
+gradle/
+*.class
+out/
+.DS_Store
+local.properties
+*.tmp
+*.temp
