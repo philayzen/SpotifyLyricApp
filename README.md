@@ -1,6 +1,6 @@
 # Spotify Lyric App
 
-Uses spotify repository as core functionality. The webapp starts the spotify-project to host the website and calls it.
+This project creates an Android app for the spotify repository. The webapp starts the spotify-project to host the website and calls it.
 
 # Limitations
 Due to a change in Spotify's policies, new lyrics can't be retrieved anymore. Therefore, only songs in database can be retrieved. 
