@@ -15,7 +15,6 @@ public class DatabaseImport {
         // Path to the database in the internal storage
             File dbFile = context.getDatabasePath(DATABASE_NAME);
 
-        // Check if the database already exists
         if (dbFile.exists()) {
             return; // Database already copied
         }
